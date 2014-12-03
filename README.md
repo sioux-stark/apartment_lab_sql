@@ -1,4 +1,8 @@
+
+
 # Apartment lab
+
+**DON'T LOOK AT THE SOLUTIONS**
 
 - Create a database called apartmentlab 
 - Using this database, create two tables, one for owners and one for properties
