@@ -1,0 +1,41 @@
+database called apartmentlab
+*Title of table is owner, not owners
+Show all the tables.
+\dt
+Show all the users.
+\du
+Show all the data in the owners table.
+SELECT * FROM OWNER;
+Show the names of all owners.
+SELECT NAME FROM OWNER;
+Show the ages of all of the owners in ascending order. 
+SELECT AGE FROM OWNER ORDER BY AGE ASC;
+Show the name of any owner whose name is Donald. 
+SELECT * FROM OWNER WHERE NAME = 'DONALD';
+Show the age of all owners who are older than 30. 
+SELECT * FROM OWNER WHERE AGE > 30;
+Show the name of all owners whose name starts with an E. 
+SELECT * FROM OWNER WHERE NAME LIKE 'E%';
+Add an owner named John who is 33 years old to the owners table.
+INSERT INTO OWNER (name, age) VALUES ('John',33);
+Add an owner named Jane who is 43 years old to the owners table.
+INSERT INTO OWNER (name, age) VALUES ('Jane',43);
+Change Jane's age to 30.
+UPDATE OWNER SET age = 30 where name ='Jane';
+CHANGE Jane's name to Janet. 
+UPDATE OWNER SET name ='Janet' WHERE name ='Jane';
+Add a property named Archstone that has 20 units. 
+INSERT INTO PROPERTIES (name,units, owner_id) VALUES ('Archstone',20,1);
+Delete the owner named Jane. 
+DELETE FROM OWNER WHERE name='Jane';
+Show all of the properties in alphabetical order that are not named Archstone and do not have an id of 3 or 5. 
+SELECT * FROM PROPERTIES WHERE name <> 'Archstone' AND property_id NOT IN (3,5) ORDER BY name ASC;
+Count the total number of rows in the properties table 
+SELECT COUNT (*) FROM properties;
+Show the highest age 
+SELECT MAX(age) FROM OWNER;
+Show the names of the first three owners in your owners table.
+SELECT * FROM OWNER LIMIT 3;
+
+
+
